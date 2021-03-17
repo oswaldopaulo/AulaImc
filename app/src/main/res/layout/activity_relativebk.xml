@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+            xmlns:tools="http://schemas.android.com/tools">
+
+    <EditText
+            android:id="@+id/pesoEDT"
+            style="@style/input_style"
+            android:layout_centerInParent="true"
+            android:hint="Insira o peso aqui"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/titleTXT"
+    />
+
+
+    <EditText
+            android:id="@+id/alturaEDT"
+            style="@style/input_style"
+            android:hint="Insira a sua altura"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/pesoEDT"
+
+    />
+    <Button
+            android:id="@+id/calcularBTN"
+            android:backgroundTint="@color/holoblue_ligth"
+            android:text="Calcular"
+            android:padding="16dp"
+            android:textSize="16sp"
+            android:layout_marginTop="46dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+        />
+
+
+    <TextView
+            android:id="@+id/titleTXT"
+            style="@style/title_purple"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="48dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="IMC" android:textSize="48sp"/>
+
+</RelativeLayout>

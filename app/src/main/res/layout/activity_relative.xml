@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" android:id="@+id/relativeLayout">
+
+    <EditText
+            android:id="@+id/pesoEDT"
+            style="@style/input_style"
+            android:layout_centerInParent="true"
+            android:hint="Insira o peso aqui"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/titleTXT"
+            app:layout_constraintTop_toTopOf="parent" android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true" app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/titleTXT" app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"/>
+
+
+    <EditText
+            android:id="@+id/alturaEDT"
+            style="@style/input_style"
+            android:hint="Insira a sua altura"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/pesoEDT"
+
+            app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/pesoEDT"/>
+    <Button
+            android:id="@+id/calcularBTN"
+            android:backgroundTint="@color/holoblue_ligth"
+            android:text="Calcular"
+            android:padding="16dp"
+            android:textSize="16sp"
+            android:layout_marginTop="46dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            app:layout_constraintStart_toStartOf="parent" app:layout_constraintBottom_toBottomOf="parent"/>
+
+
+    <TextView
+            android:id="@+id/titleTXT"
+            style="@style/title_purple"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="48dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="IMC" android:textSize="48sp" app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent" app:layout_constraintRight_toRightOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
