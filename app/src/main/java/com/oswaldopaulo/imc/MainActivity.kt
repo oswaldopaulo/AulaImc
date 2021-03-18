@@ -18,19 +18,21 @@ class MainActivity : AppCompatActivity() {
     private fun setListeners(){
 
         calcularBTN.setOnClickListener{
-            val altura = alturaEDT.text.toString().toDouble()
-            val peso  = pesoEDT.text.toString().toDouble()
+            val altura = alturaEDT.text.toString()
+            val peso  = pesoEDT.text.toString()
 
             titleTXT.setText( imc(peso, altura).toString() )
         }
     }
 
-    fun imc(peso: Double, altura :Double) : Double{
+    fun imc(peso: String, altura :String) : Double{
         fun Double.format(digits: Int) = "%.${digits}f".format(this).replace(',','.').toDouble()
-
-        if(altura <= 0) return 0.00
-        if(peso <= 0) return 0.00
+        val altura = altura.toFloatOrNull()
+        val peso  = peso.toFloatOrNull()
+        if(altura == null) return 0.00
+        if(peso == null) return 0.00
         val res = peso / (altura).pow(2)
-        return res.format(2)
+
+        return res.toDouble().format(2)
     }
 }
